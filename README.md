@@ -1,82 +1,86 @@
-# Logic-Gate-Simulator-C-
-🧠 Logic Gate Simulator (C++)
+# 🧠 Logic Gate Simulator (C++)
 
-A console-based Logic Gate Simulator built using C++ and Object-Oriented Programming principles.
+A console-based **Logic Gate Simulator** built using C++ and Object-Oriented Programming principles.  
 This project simulates fundamental digital logic gates and demonstrates runtime polymorphism using dynamic binding.
 
-🚀 Project Overview
+---
+
+## 🚀 Project Overview
 
 This simulator allows users to:
 
-Select different logic gates
-
-Provide binary inputs (0 or 1)
-
-Execute the selected logic operation
-
-Chain operations using the previous result
-
-View complete operation history
+- Select different logic gates  
+- Provide binary inputs (0 or 1)  
+- Execute the selected logic operation  
+- Chain operations using the previous result  
+- View complete operation history  
 
 The project focuses on implementing core OOP concepts in a practical way.
 
-🏗️ OOP Concepts Used
-✅ Abstraction
+---
 
-An abstract base class logicGate defines a pure virtual function:
+## 🏗️ OOP Concepts Used
 
+### ✅ Abstraction
+An abstract base class `logicGate` defines a pure virtual function:
+
+```cpp
 virtual int execute() = 0;
+```
 
-This ensures that every derived gate class must implement its own execution logic.
+---
 
-✅ Inheritance
-
+### ✅ Inheritance
 Each logic gate (AND, OR, NOT, etc.) inherits from the base class:
 
+```cpp
 class AND : public logicGate
-✅ Polymorphism
+```
 
+---
+
+### ✅ Polymorphism
 A base class pointer is used:
 
+```cpp
 logicGate* ptr;
+```
 
-This allows dynamic binding at runtime.
+This enables dynamic binding at runtime.
 
-✅ Dynamic Binding
+---
 
-The virtual keyword ensures that the correct execute() function is called depending on which gate object the pointer is referencing.
+### ✅ Dynamic Binding
+The `virtual` keyword ensures that the correct `execute()` function is called depending on which gate object the pointer references.
 
-🔢 Supported Logic Gates
+---
 
-AND
+## 🔢 Supported Logic Gates
 
-OR
+- AND  
+- OR  
+- NOT  
+- XOR  
+- NAND  
+- NOR  
+- XNOR (optional)
 
-NOT
+---
 
-XOR
+## ⚙️ Features
 
-NAND
+- Menu-driven interface  
+- Binary input validation (0 or 1)  
+- Gate chaining  
+- Operation history tracking using `vector<string>`  
+- Dynamic memory allocation using `new` and `delete`  
+- Clean OOP structure  
 
-NOR
+---
 
-XNOR (optional)
+## 🖥️ Sample Output
 
-⚙️ Features
-
-Menu-driven interface
-
-Binary input validation (0 or 1)
-
-Gate chaining
-
-Operation history tracking using vector<string>
-
-Dynamic memory allocation using new and delete
-
-Clean OOP structure
-
-🖥️ Sample Output
+```
 1--AND
 2--OR
 3--NOT
@@ -91,60 +95,81 @@ Enter Input 1: 1
 Enter Input 2: 1
 
 Result: 1
+```
 
 History Example:
 
+```
 --- Operation History ---
 1) AND(1,1) = 1
 2) XOR(1,0) = 1
 3) NOT(1) = 0
-📂 Project Structure
+```
+
+---
+
+## 📂 Project Structure
+
+```
 LogicGateSimulator/
 │
 ├── main.cpp
 └── README.md
-🛠️ Compilation & Execution
-Using g++ (Windows / Linux / Mac)
+```
+
+---
+
+## 🛠️ Compilation & Execution
+
+### Using g++ (Windows / Linux / Mac)
 
 Compile:
 
+```bash
 g++ main.cpp -o logicSimulator
+```
 
 Run:
 
+```bash
 ./logicSimulator
-Windows (MinGW)
+```
+
+### Windows (MinGW)
+
+```bash
 g++ main.cpp -o logicSimulator.exe
 logicSimulator.exe
-📈 Future Improvements
+```
 
-Add file-based history saving
+---
 
-Add GUI version using Qt
+## 📈 Future Improvements
 
-Implement full circuit simulation
+- Add file-based history saving  
+- Add GUI version  
+- Implement full circuit simulation  
+- Improve input validation  
+- Replace raw pointers with smart pointers  
 
-Improve input validation
+---
 
-Replace raw pointers with smart pointers
+## 🎯 Learning Outcomes
 
-🎯 Learning Outcomes
+This project demonstrates:
 
-Through this project, the following concepts were strengthened:
+- Runtime Polymorphism  
+- Virtual Functions  
+- Abstract Classes  
+- Dynamic Memory Management  
+- STL usage (`vector`, `string`)  
+- Menu-driven program design  
 
-Runtime Polymorphism
+---
 
-Virtual Functions
+## 👨‍💻 Author
 
-Abstract Classes
-
-Dynamic Memory Management
-
-STL usage (vector, string)
-
-Menu-driven program design
-
-👨‍💻 Author
-
-Prathamesh Mohitr
+Prathamesh Mohite
+FY electrical Engineer
+Intrested Field:-VLSI, Electrical Vehicle,Embadded,IoT
 
