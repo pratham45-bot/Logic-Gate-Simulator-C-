@@ -169,7 +169,7 @@ This project demonstrates:
 
 ## 👨‍💻 Author
 
--Prathamesh Mohite
--FY electrical Engineer
--Intrested Field:-VLSI, Electrical Vehicle,Embadded,IoT
+Prathamesh Mohite
+//FY electrical Engineer
+//Intrested Field:-VLSI, Electrical Vehicle,Embadded,IoT
 
